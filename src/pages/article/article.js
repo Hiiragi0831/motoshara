@@ -1,8 +1,5 @@
-function init(container) {
-	if (container.classList.contains('article')) {
-		// eslint-disable-next-line no-console
-		console.log('article init');
-	}
+function init() {
+	console.log('article init');
 }
 
 export default {
