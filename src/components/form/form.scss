@@ -1,0 +1,99 @@
+.form {
+	&__input {
+		outline: none;
+		border: 1px solid $color-gray-50;
+		border-radius: vc(5);
+		padding: vc(12) vc(15);
+		width: 100%;
+		font-size: vc(14);
+	}
+
+	&__box-icon {
+		position: relative;
+		display: flex;
+		align-items: center;
+	}
+
+	&__icon {
+		position: absolute;
+		right: vc(30);
+		width: vc(14);
+		height: vc(14);
+	}
+
+	&__select {
+		appearance: none;
+		border-radius: vc(90);
+		padding: vc(16) vc(30);
+		width: 100%;
+		font-weight: 400;
+		font-size: vc(14);
+	}
+
+	&__group {
+		display: flex;
+	}
+
+	&__floating {
+		position: relative;
+
+		input {
+			outline: none;
+			border: 1px solid $color-light-grey;
+			border-radius: vc(6);
+			padding: vc(18) vc(12);
+			width: 100%;
+
+			&::placeholder {
+				opacity: 0;
+			}
+
+			&:not(:placeholder-shown) {
+				padding-top: vc(26);
+				padding-bottom: vc(10);
+
+				~ label {
+					color: rgba($color-black, 0.8);
+					transform: scale(0.85) translateY(vc(-8)) translateX(vc(2));
+				}
+			}
+
+			&:focus {
+				padding-top: vc(26);
+				padding-bottom: vc(10);
+
+				~ label {
+					opacity: 0.8;
+					transform: scale(0.85) translateY(vc(-8)) translateX(vc(2));
+
+					&::after {
+						content: "";
+						position: absolute;
+						z-index: -1;
+						height: vc(24);
+						background-color: $color-white;
+						inset: vc(16) vc(6);
+					}
+				}
+			}
+		}
+
+		label {
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 2;
+			overflow: hidden;
+			border: none;
+			padding: vc(18) vc(12);
+			height: 100%;
+			white-space: nowrap;
+			text-align: start;
+			text-overflow: ellipsis;
+			color: $color-black;
+			transform-origin: 0 0;
+			transition: opacity 100ms $easeInOutQuart, transform 100ms $easeInOutQuart;
+			pointer-events: none;
+		}
+	}
+}

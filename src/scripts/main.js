@@ -16,6 +16,7 @@ import lazyLoad from '@scripts/modules/lazy-load';
 // import router from '@components/router/router';
 import home from '../pages/home/home';
 import article from '../pages/article/article';
+import {header} from '../components/header/header';
 // import sharing from '../components/sharing/sharing';
 
 // eslint-disable-next-line no-underscore-dangle
@@ -61,6 +62,7 @@ const init = () => {
 	actualYear.init();
 	vhFix.init();
 	lazyLoad.init();
+	header();
 	home.init();
 	article.init();
 	// закоментировать или удалить если SPA поведение не требуется

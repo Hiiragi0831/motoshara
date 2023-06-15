@@ -1,0 +1,270 @@
+.header {
+	$p: &;
+
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 99;
+	color: $color-gray-500;
+	background-color: $color-white;
+
+	&__body {
+		display: flex;
+		align-items: center;
+
+		&-inner {
+			border-bottom: vc(1) solid rgba($color-white, 0.1);
+			padding: vc(30) 0;
+
+			@include devices {
+				justify-content: normal;
+				border: none;
+				padding: vc(15) 0;
+			}
+		}
+
+		.form {
+			width: vc(424);
+
+			@include devices {
+				display: none;
+			}
+		}
+
+		.contact-box {
+			display: flex;
+			gap: vc(46);
+
+			@include devices {
+				display: none;
+			}
+		}
+	}
+
+	&__box {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include devices {
+			gap: vc(15);
+		}
+	}
+
+	.logo {
+		width: vc(290);
+		height: vc(70);
+
+		@include devices {
+			width: vc(160);
+			height: vc(40);
+		}
+	}
+
+	&__basket {
+		flex-shrink: 0;
+		border-radius: 100%;
+		padding: vc(20);
+		width: vc(70);
+		height: vc(70);
+		background-color: $color-primary-500;
+
+		@include devices {
+			margin-left: auto;
+			padding: vc(5);
+			width: vc(30);
+			height: vc(30);
+		}
+	}
+
+	&__footer {
+		padding: vc(20) 0;
+		background-color: $color-gray-500;
+	}
+
+	&__nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: vc(10);
+
+		@include devices {
+			flex-direction: column;
+			align-items: baseline;
+			gap: vc(0);
+		}
+	}
+
+	&__link {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+
+		a {
+			padding: vc(10) 0;
+			font-size: vc(18);
+			color: $color-white;
+			transition: color $transition;
+
+			@include devices {
+				padding: vc(8) 0;
+				font-size: vc(16);
+			}
+		}
+
+		&-dropdown {
+			padding-right: vc(15);
+
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				width: vc(6);
+				height: vc(1);
+				background-color: $color-white;
+				transition: background-color $transition;
+			}
+
+			&::before {
+				right: vc(3.5);
+				transform: rotate(45deg);
+			}
+
+			&::after {
+				right: 0;
+				transform: rotate(-45deg);
+			}
+
+			a {
+				padding: vc(10) 0;
+				color: $color-white;
+				transition: color $transition;
+			}
+
+			&:hover {
+				#{$p}__dropdown {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+
+		&:hover {
+			&::before,
+			&::after {
+				background-color: $color-primary-500;
+			}
+
+			a {
+				color: $color-primary-500;
+			}
+		}
+	}
+
+	&__dropdown {
+		position: absolute;
+		left: 0;
+		top: vc(40);
+		z-index: -1;
+		display: flex;
+		flex-direction: column;
+		padding: vc(5) vc(15);
+		width: vc(180);
+		background-color: $color-gray;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity $transition, visibility $transition;
+
+		#{$p}__link {
+			a {
+				color: $color-white;
+			}
+
+			&:hover {
+				a {
+					color: $color-primary-500;
+				}
+			}
+		}
+
+		&--large {
+			left: 50%;
+			column-gap: vc(10);
+			flex-wrap: wrap;
+			padding: vc(15);
+			width: vc(815);
+			height: vc(375);
+			transform: translateX(-50%);
+			row-gap: vc(5);
+
+			#{$p}__link {
+				a {
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	&__burger {
+		display: none;
+		width: vc(30);
+		height: vc(30);
+
+		svg {
+			fill: $color-gray-500;
+		}
+
+		@include devices {
+			display: block;
+		}
+	}
+}
+
+.header-mobile {
+	position: fixed;
+	left: vc(-320);
+	z-index: 1000;
+	overflow: auto;
+	padding: vc(20) vc(50) vc(20) vc(15);
+	width: vc(310);
+	height: 100vh;
+	background-color: $color-gray;
+	transition: left $transition;
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		gap: vc(20);
+	}
+
+	&__close {
+		position: absolute;
+		right: vc(15);
+		top: vc(15);
+		display: flex;
+		width: vc(15);
+		height: vc(15);
+
+		svg {
+			width: 100%;
+			fill: $color-white;
+		}
+	}
+
+	.contact-box {
+		display: flex;
+		flex-direction: column;
+		gap: vc(15);
+
+		&__item {
+			color: $color-white;
+		}
+	}
+
+	&.is-active {
+		left: 0;
+	}
+}

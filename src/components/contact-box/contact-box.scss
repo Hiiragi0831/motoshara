@@ -1,0 +1,39 @@
+.contact-box {
+	&__item {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		font-weight: 400;
+		font-size: vc(13);
+		line-height: vc(15);
+		color: $color-gray-500;
+
+		a {
+			transition: color $transition;
+
+			&:hover {
+				color: $color-primary-500;
+			}
+		}
+	}
+
+	&__icon {
+		margin-top: vc(4);
+		width: vc(20);
+		height: vc(20);
+		fill: $color-primary-500;
+	}
+
+	&__title {
+		display: flex;
+		font-weight: 700;
+		font-size: vc(18);
+		line-height: vc(26);
+		text-decoration: none;
+		gap: vc(10);
+	}
+
+	&__bottom {
+		padding-left: vc(30);
+	}
+}

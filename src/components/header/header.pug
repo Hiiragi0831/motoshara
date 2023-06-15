@@ -1,2 +1,61 @@
 header.header
-	h2 header
+	.header__body
+		.container
+			.header__box.header__body-inner
+				a.logo(href="/")
+					+svg('logo')
+				form.form
+					.form__box-icon
+						input.form__input(type="text" placeholder="Поиск по сайту")
+						button.form__icon(type="submit")
+							+svg("icon-search")
+				include @components/contact-box/contact-box
+				a.header__basket(href="#")
+					+svg("icon-basket")
+				.header__burger.for-devices
+					+svg('icon-burger')
+	.header__footer.for-desktop
+		.container
+			nav.header__nav
+				.header__link
+					a(href="#") Главная
+				.header__link
+					a(href="#") Каталог
+				//.header__link.header__link-dropdown
+				//	a(href="#") Каталог
+				//	.header__dropdown
+				//		.header__link
+				//			a(href="#") Техника
+				//		.header__link
+				//			a(href="#") Запчасти
+				//		.header__link
+				//			a(href="#") Шины
+				.header__link
+					a(href="#") О компании
+				.header__link
+					a(href="#") Оплата и возврат
+				.header__link
+					a(href="#") Поставщикам
+				.header__link
+					a(href="#") Контакты
+.header-mobile
+	.header-mobile__box
+		.header-mobile__close
+			+svg('icon-close')
+		.header-mobile__search
+			form.form
+				input.form__input(type="text" placeholder="Поиск товара")
+		nav.header__nav
+			.header__link
+				a(href="#") Главная
+			.header__link
+				a(href="#") Каталог
+			.header__link
+				a(href="#") О компании
+			.header__link
+				a(href="#") Оплата и возврат
+			.header__link
+				a(href="#") Поставщикам
+			.header__link
+				a(href="#") Контакты
+		include @components/contact-box/contact-box

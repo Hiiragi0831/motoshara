@@ -2,13 +2,35 @@
 $color-black: #000;
 $color-white: #fff;
 
+$color-black: #000;
+$color-white: #fff;
+$color-gray-50: #dfdfdf;
+$color-gray-500: #282828;
+$color-primary-500: #e94a4b;
+
+$color-gray: #1f1f1f;
+$color-gray2: #303030;
+$color-gray3: #181818;
+$color-gray4: #141414;
+$color-gray5: #4b4b4b;
+$color-gray6: #1a1a1a;
+$color-light: #b7b7b7;
+$color-light-grey: #d0d0d0;
+$color-orange: #f8991d;
+$color-orange-dark: #e06810;
+$color-green: #8cc851;
+$color-ace: #f8f8f8;
+$color-ace2: #ebedf4;
+$color-red: #f00;
+
 // FONTS
-$font-name: 'FontName', Arial, sans-serif;
+$font-raleway: 'Raleway', Arial, sans-serif;
 
 // TRANSITIONS
 $transition-duration: 0.35s;
 $transition-timing-function: ease;
 $transition: $transition-duration $transition-timing-function;
+$easeInOutQuart: cubic-bezier(0.76, 0, 0.24, 1); // https://easings.net/ru#easeInOutQuart
 
 // SETTINGS
 $desktop-xxl: 2560;

@@ -40,7 +40,7 @@
 		900: 'Black',
 	);
 
-	$font-type: map-get($font-weights, $font-weight) + if($font-style == italic, 'Italic', '');
+	$font-type: map-get($font-weights, $font-weight) + if($font-style == italic, 'italic', '');
 
 	@font-face {
 		src: url('#{$path}#{$font-name}/#{$font-name}-#{$font-type}.woff2') format('woff2'),
