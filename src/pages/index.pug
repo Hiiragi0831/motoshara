@@ -10,8 +10,10 @@ block content
 	+router(pageName)
 		.home
 			include @components/header/header
-			h1 Index.html
-			a(href="./article") article
-			include @components/footer/footer
-			include @components/analytics/analytics
-			+sharing('vk')
+			main
+				//h1 Index.html
+				//a(href="./article") article
+				include @components/commodity/commodity
+
+			//include @components/footer/footer
+			//include @components/analytics/analytics

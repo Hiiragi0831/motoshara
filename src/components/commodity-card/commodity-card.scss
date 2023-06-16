@@ -1,0 +1,66 @@
+.commodity-card {
+	border-radius: vc(10);
+	padding: vc(25) vc(24);
+	width: vc(312);
+	box-shadow: 0 vc(12) vc(56) rgba(9, 29, 50, 0.15);
+	background-color: $color-white;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__img {
+		margin-top: vc(24);
+		margin-bottom: vc(24);
+
+		img {
+			border-radius: vc(10);
+			width: vc(215);
+			height: vc(168);
+		}
+	}
+
+	&__info {
+		p {
+			margin-top: vc(15);
+			margin-bottom: vc(15);
+			padding: 0 vc(60) 0 vc(60);
+			font-weight: 500;
+			font-size: vc(16);
+			line-height: vc(24);
+			text-align: center;
+		}
+
+		h4 {
+			margin-bottom: vc(29);
+			font-weight: 700;
+			font-size: vc(16);
+			line-height: vc(24);
+			text-align: center;
+		}
+	}
+
+	&__button {
+		margin-bottom: vc(25);
+
+		a {
+			border-radius: vc(3);
+			padding: vc(14) vc(98);
+			width: vc(264);
+			height: vc(44);
+			font-weight: 500;
+			font-size: vc(14);
+			line-height: vc(16);
+			text-align: center;
+			color: $color-white;
+			background: #e94a4b;
+			transition: $transition;
+
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+}

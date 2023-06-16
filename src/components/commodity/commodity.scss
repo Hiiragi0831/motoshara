@@ -1,0 +1,18 @@
+.commodity {
+	h1 {
+		margin-bottom: vc(30);
+		font-weight: 700;
+		font-size: vc(48);
+		line-height: vc(56);
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-areas:
+			". . . ."
+			". . . .";
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		gap: vc(24) vc(24);
+	}
+}

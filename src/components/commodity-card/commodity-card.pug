@@ -1,0 +1,13 @@
+mixin commodity-card()
+	.commodity-card
+		.container
+			.commodity-card__img
+				+picture({
+					path: `${baseDir}assets/images/commodity-card/low-rider`,
+					ext: `png`,
+				})
+			.commodity-card__info
+				p Harley-Davidson Low Rider, 2020
+				h4 800 000 ₽
+			.commodity-card__button
+				a.button(href="#") В корзину
