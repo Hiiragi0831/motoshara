@@ -1,7 +1,6 @@
 .commodity-card {
 	border-radius: vc(10);
 	padding: vc(25) vc(24);
-	width: vc(312);
 	box-shadow: 0 vc(12) vc(56) rgba(9, 29, 50, 0.15);
 	background-color: $color-white;
 
@@ -48,8 +47,6 @@
 		a {
 			border-radius: vc(3);
 			padding: vc(14) vc(98);
-			width: vc(264);
-			height: vc(44);
 			font-weight: 500;
 			font-size: vc(14);
 			line-height: vc(16);
