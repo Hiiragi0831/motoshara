@@ -1,0 +1,34 @@
+.button {
+	position: relative;
+	display: inline-flex;
+	overflow: hidden;
+	border-radius: vc(5);
+	padding: vc(17) vc(32);
+	font-weight: 500;
+	font-size: vc(18);
+	line-height: vc(26);
+	transition-property: color, background-color;
+	transition-duration: $transition-duration;
+	transition-timing-function: $transition-timing-function;
+	cursor: pointer;
+
+	&__primary {
+		color: $color-white;
+		background-color: $color-primary-500;
+
+		&:hover {
+			color: $color-primary-500;
+			background-color: $color-white;
+		}
+	}
+
+	&__white {
+		color: $color-primary-500;
+		background-color: $color-white;
+
+		&:hover {
+			color: $color-white;
+			background-color: $color-primary-500;
+		}
+	}
+}

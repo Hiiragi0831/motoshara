@@ -1,0 +1,13 @@
+section.category
+	.container
+		.category__row
+			.category__item
+				.category__item-img
+					+picture({
+						path: `${baseDir}assets/images/hero-1`,
+						ext: 'jpg',
+					})
+				.category__item-info
+					.category__item-title Название категории
+					.category__item-button
+						a.button.button__primary(href="#") В каталог

@@ -1,11 +1,11 @@
 @use 'sass:math';
 
 :root {
-	--width-base: #{$desktop-md};
-	--width-current: #{$desktop-xxl * 1px};
+	--width-base: #{$desktop-xl};
+	--width-current: #{$desktop-xl * 1px};
 	--width-multiplier: var(--width-current) / var(--width-base);
 
-	@include desktop-xxl {
+	@include desktop-xl {
 		--width-current: 100vw;
 	}
 
@@ -38,7 +38,7 @@ body {
 	text-rendering: optimizeLegibility;
 	text-size-adjust: 100%;
 	-webkit-tap-highlight-color: transparent;
-	background-color: #1a1a1a;
+	background-color: $color-white;
 
 	&.is-resizing {
 		opacity: 0;
@@ -145,6 +145,10 @@ iframe {
 	height: 100%;
 }
 
+section {
+	padding: vc(60) 0;
+}
+
 .container {
 	position: relative;
 	z-index: 1;
@@ -157,4 +161,13 @@ iframe {
 	@include devices {
 		padding: 0 vc(15);
 	}
+}
+
+.site {
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
+	min-height: 100vh; // fallback
+	// stylelint-disable-next-line
+	min-height: var(--vh);
 }

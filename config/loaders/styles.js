@@ -14,6 +14,6 @@ export const styles = {
     test: /\.(sa|sc|c)ss$/,
     use: [isDev() ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
     generator: {
-        filename: 'assets/styles/[name].[hash:8][ext]',
+        filename: 'assets/styles/[name][ext]',
     },
 };

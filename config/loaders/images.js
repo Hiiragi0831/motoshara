@@ -10,7 +10,7 @@ export const images = {
     test: /\.(png|jpg|jpeg|gif|ico|webp|avif|svg)$/i,
     type: 'asset/resource',
     generator: {
-        filename: 'assets/images/[name].[hash:8][ext]',
+        filename: 'assets/images/[name][ext]',
     },
     // use: [
     //     {

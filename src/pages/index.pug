@@ -7,11 +7,12 @@ append vars
 
 block content
 	.bg-overflow.is-hidden
-	+router(pageName)
-		.home
-			include @components/header/header
-			h1 Index.html
-			a(href="./article") article
-			include @components/footer/footer
-			include @components/analytics/analytics
-			+sharing('vk')
+	.site.home
+		include @components/header/header
+		main
+			include @components/hero/hero
+			include @components/category/category
+
+
+		include @components/footer/footer
+		include @components/analytics/analytics

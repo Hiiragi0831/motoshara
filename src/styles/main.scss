@@ -11,9 +11,17 @@
 @import 'base';
 @import 'helpers';
 
+// базовые компоненты
+@import '@components/form/form';
+@import '@components/button/button';
+
+// Компоненты
 @import '@components/header/header';
 @import '@components/footer/footer';
 @import '@components/contact-box/contact-box';
-@import '@components/form/form';
+@import '@components/hero/hero';
+@import '@components/commodity/commodity';
+@import '@components/category/category';
 
+// Страницы
 @import '@pages/home/home';
