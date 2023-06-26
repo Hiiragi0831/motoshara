@@ -1,13 +1,15 @@
 section.category
 	.container
+		h2 Популярные категории
 		.category__row
-			.category__item
-				.category__item-img
-					+picture({
-						path: `${baseDir}assets/images/hero-1`,
-						ext: 'jpg',
-					})
-				.category__item-info
-					.category__item-title Название категории
-					.category__item-button
-						a.button.button__primary(href="#") В каталог
+			each val in [1, 2, 3, 4, 5, 6]
+				.category__item
+					.category__item-img
+						+picture({
+							path: `${baseDir}assets/images/hero-1`,
+							ext: 'jpg',
+						})
+					.category__item-info
+						.category__item-title Название категории
+						.category__item-button
+							a.button.button__primary(href="#") В каталог

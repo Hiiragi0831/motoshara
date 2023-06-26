@@ -2,9 +2,8 @@
 	&__row {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 1fr 1fr 1fr;
-		overflow: hidden;
 		width: 100%;
+		gap: vc(24);
 	}
 
 	&__item {

@@ -1,5 +1,54 @@
 .commodity {
-	&__img {
+	&__row {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		width: 100%;
+		gap: vc(24);
+	}
 
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		overflow: hidden;
+		border-radius: vc(5);
+		padding: vc(24);
+		box-shadow: $box-shadow;
+		text-align: center;
+		background-color: $color-white;
+		gap: vc(15);
+	}
+
+	&__img {
+		overflow: hidden;
+		border-radius: vc(5);
+		width: 100%;
+		height: vc(215);
+
+		img,
+		picture {
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: vc(16);
+		line-height: vc(24);
+	}
+
+	&__price {
+		font-weight: 700;
+		font-size: vc(16);
+		line-height: vc(24);
+	}
+
+	&__button {
+		width: 100%;
+
+		.button {
+			width: 100%;
+		}
 	}
 }
