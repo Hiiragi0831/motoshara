@@ -8,6 +8,7 @@ $color-gray-50: #dfdfdf;
 $color-gray-500: #282828;
 $color-gray-900: #080808;
 $color-primary-500: #e94a4b;
+$color-secondary-900: #091d32;
 
 $color-gray: #1f1f1f;
 $color-gray2: #303030;
@@ -42,3 +43,5 @@ $desktop-sm: 1366;
 $desktop-xs: 1280;
 $desktop: 1024;
 $tablet: 1024;
+
+$box-shadow: 0 vc(12) vc(56) 0 rgba($color-secondary-900, 0.15);
