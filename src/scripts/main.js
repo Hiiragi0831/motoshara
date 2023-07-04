@@ -2,6 +2,7 @@ import debounce from 'lodash.debounce';
 import throttle from 'lodash.throttle';
 
 import '@styles/vendor.scss';
+import 'swiper/css/bundle';
 import '@styles/main.scss';
 
 import actualYear from '@scripts/modules/actual-year';
@@ -17,6 +18,7 @@ import lazyLoad from '@scripts/modules/lazy-load';
 import home from '../pages/home/home';
 import article from '../pages/article/article';
 import {header} from '../components/header/header';
+import slider from '../components/slider/slider';
 // import sharing from '../components/sharing/sharing';
 
 // eslint-disable-next-line no-underscore-dangle
@@ -65,6 +67,7 @@ const init = () => {
 	header();
 	home.init();
 	article.init();
+	slider.init();
 	// закоментировать или удалить если SPA поведение не требуется
 	// router.init(scriptsInit, scriptsDestroy);
 

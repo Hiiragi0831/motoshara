@@ -98,6 +98,7 @@
         "lozad": "1.16.0",
         "ninelines-sharing": "1.5.8",
         "scroll-depth": "1.2.0",
+        "swiper": "10.0.2",
         "ua-parser-js": "1.0.33"
     },
     "husky": {

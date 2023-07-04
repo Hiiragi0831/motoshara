@@ -1,0 +1,14 @@
+section.request
+	.request__bg
+		+picture({
+			path: `${baseDir}assets/images/request/bg`,
+			ext: 'jpg',
+		})
+	.container
+		.request__row
+			p.h2 Возникли проблемы с выбором ?
+			p.lead Закажите бесплатную консультацию
+			form.form
+				input.form__input(type="text" placeholder="lorem")
+				input.form__input(type="text" placeholder="lorem")
+				button.button.button__primary Заказать звонок

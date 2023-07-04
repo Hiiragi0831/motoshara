@@ -1,6 +1,7 @@
 .button {
 	position: relative;
 	display: inline-flex;
+	flex-shrink: 0;
 	justify-content: center;
 	overflow: hidden;
 	border-radius: vc(5);

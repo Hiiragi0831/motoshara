@@ -1,0 +1,16 @@
+mixin slider-partners()
+	section.slider
+		.container
+			.slider__standard
+				.swiper
+					.swiper-wrapper
+						- let n = 0;
+						while n < 8
+							.swiper-slide
+								.partners
+									+picture({
+										path: `${baseDir}assets/images/partners/nokian-tyres`,
+										ext: 'png',
+										alt: n++
+									})
+				.swiper-pagination

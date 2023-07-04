@@ -1,0 +1,30 @@
+.slider {
+	position: relative;
+	padding-top: vc(120);
+
+	&__standard {
+		.swiper {
+			overflow: initial;
+			margin-right: vc(-30);
+
+			&-slide {
+				padding-right: vc(30);
+			}
+
+			&-pagination {
+				position: relative;
+				bottom: 0;
+				margin-top: vc(24);
+
+				&-bullet {
+					width: vc(15);
+					height: vc(15);
+
+					&-active {
+						background-color: $color-primary-500;
+					}
+				}
+			}
+		}
+	}
+}

@@ -3,9 +3,11 @@
 		outline: none;
 		border: 1px solid $color-gray-50;
 		border-radius: vc(5);
-		padding: vc(12) vc(15);
+		padding: vc(12) vc(18);
 		width: 100%;
-		font-size: vc(14);
+		font-size: vc(16);
+		color: $color-gray-500;
+		background-color: $color-white;
 	}
 
 	&__box-icon {
