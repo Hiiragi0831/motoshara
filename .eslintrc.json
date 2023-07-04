@@ -69,7 +69,7 @@
 		"accessor-pairs": "off",
 		"array-callback-return": "error",
 		"block-scoped-var": "error",
-		"class-methods-use-this": "error",
+		"class-methods-use-this": "off",
 		"complexity": "off",
 		"consistent-return": "error",
 		"curly": [
@@ -345,7 +345,7 @@
 		"no-tabs": "off",
 		"no-ternary": "off",
 		"no-trailing-spaces": "error",
-		"no-underscore-dangle": "error",
+		"no-underscore-dangle": "off",
 		"no-unneeded-ternary": "error",
 		"no-whitespace-before-property": "error",
 		"nonblock-statement-body-position": "off",

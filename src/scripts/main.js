@@ -16,9 +16,9 @@ import lazyLoad from '@scripts/modules/lazy-load';
 // import analytics from '@components/analytics/analytics';
 // import router from '@components/router/router';
 import home from '../pages/home/home';
-import article from '../pages/article/article';
 import {header} from '../components/header/header';
 import slider from '../components/slider/slider';
+import {Tabs} from '../components/tabs/tabs';
 // import sharing from '../components/sharing/sharing';
 
 // eslint-disable-next-line no-underscore-dangle
@@ -66,8 +66,10 @@ const init = () => {
 	lazyLoad.init();
 	header();
 	home.init();
-	article.init();
 	slider.init();
+	let tabs = new Tabs();
+	window.tabs = tabs;
+
 	// закоментировать или удалить если SPA поведение не требуется
 	// router.init(scriptsInit, scriptsDestroy);
 

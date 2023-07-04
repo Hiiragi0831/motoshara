@@ -1,0 +1,16 @@
+extends @pug/base
+
+append globals
+	- pageName = 'categories'
+
+append vars
+
+block content
+	.bg-overflow.is-hidden
+	.site.page
+		include @components/header/header
+		main
+			include @components/category/category
+
+		include @components/footer/footer
+		include @components/analytics/analytics

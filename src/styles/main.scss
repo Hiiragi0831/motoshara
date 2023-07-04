@@ -11,6 +11,7 @@
 @import 'base';
 @import 'helpers';
 @import 'typography';
+@import 'page';
 
 // базовые компоненты
 @import '@components/form/form';
@@ -26,6 +27,8 @@
 @import '@components/request/request';
 @import '@components/slider/slider';
 @import '@components/partners/partners';
+@import '@components/tabs/tabs';
 
 // Страницы
 @import '@pages/home/home';
+@import '@pages/products/products';

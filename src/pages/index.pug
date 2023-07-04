@@ -12,7 +12,12 @@ block content
 		main
 			include @components/hero/hero
 			include @components/category/category
-			include @components/commodity/commodity
+			section.home__commodity
+				.container
+					h2 Популярные категории
+					.home__commodity-row
+						each val in [1, 2, 3, 4, 5, 6, 7, 8]
+							include @components/commodity/commodity
 			include @components/request/request
 			+slider-partners()
 			include @pages/home/about

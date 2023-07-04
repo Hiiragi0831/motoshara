@@ -1,15 +1,10 @@
-section.home__commodity
-	.container
-		h2 Популярные категории
-		.home__commodity-row
-			each val in [1, 2, 3, 4, 5, 6, 7, 8]
-				.commodity
-					.commodity__img
-						+picture({
-							path: `${baseDir}assets/images/hero-1`,
-							ext: 'jpg',
-						})
-					.commodity__title Harley-Davidson Low Rider, 2020
-					.commodity__price 800 000 ₽
-					.commodity__button
-						a.button.button__primary(href="#") В корзину
+.commodity
+	.commodity__img
+		+picture({
+			path: `${baseDir}assets/images/hero-1`,
+			ext: 'jpg',
+		})
+	.commodity__title Harley-Davidson Low Rider, 2020
+	.commodity__price 800 000 ₽
+	.commodity__button
+		a.button.button__primary(href="#") В корзину

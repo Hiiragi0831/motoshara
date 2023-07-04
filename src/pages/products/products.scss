@@ -1,0 +1,50 @@
+.products {
+	h1 {
+		margin-bottom: vc(30);
+	}
+
+	&__row {
+		display: grid;
+		grid-template-columns: vc(312) 1fr;
+		margin-top: vc(30);
+		gap: vc(24);
+	}
+
+	&__results {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: vc(24);
+	}
+
+	&__filters {
+		display: flex;
+		flex-direction: column;
+
+		&-title {
+			display: flex;
+			border-top: 1px solid #d0d0d0;
+			border-bottom: 1px solid #d0d0d0;
+			padding: vc(20) vc(30);
+			gap: vc(20);
+
+			svg {
+				width: vc(20);
+				height: vc(20);
+			}
+		}
+	}
+
+	&__select {
+		appearance: none;
+		outline: none;
+		border-top: none;
+		border-right: none;
+		border-bottom: 1px solid #d0d0d0;
+		border-left: none;
+		border-radius: 0;
+		padding: vc(20) vc(30);
+		width: 100%;
+		font-weight: 500;
+		font-size: vc(16);
+	}
+}

@@ -1,5 +1,5 @@
 function init() {
-	console.log('home init');
+	// console.log('home init');
 }
 
 export default {

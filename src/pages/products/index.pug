@@ -1,0 +1,56 @@
+extends @pug/base
+
+append globals
+	- pageName = 'categories'
+
+append vars
+
+block content
+	.bg-overflow.is-hidden
+	.site.page
+		include @components/header/header
+		main
+			section.products
+				.container
+					h1 Название категории
+					form.form
+						.form__box-icon
+							input.form__input(type="text" placeholder="Поиск по сайту")
+							button.form__icon(type="submit")
+								+svg("icon-search")
+					.products__row
+						.products__filters
+							.products__filters-title
+								+svg('setting-config')
+								p Фильтры
+							.products__filter
+								.form__box-icon
+									+svg('caret-down').form__icon
+									select.form__select.products__select
+										option Категория
+										option Категория
+										option Категория
+										option Категория
+							.products__filter
+								.form__box-icon
+									+svg('caret-down').form__icon
+									select.form__select.products__select
+										option Типоразмер
+										option Типоразмер
+										option Типоразмер
+										option Типоразмер
+							.products__filter
+								.form__box-icon
+									+svg('caret-down').form__icon
+									select.form__select.products__select
+										option Бренд
+										option Бренд
+										option Бренд
+										option Бренд
+							button.button.button__grey Сбросить
+						.products__results
+							each val in [1, 2, 3, 4, 5, 6, 7, 8, 9]
+								include @components/commodity/commodity
+
+		include @components/footer/footer
+		include @components/analytics/analytics

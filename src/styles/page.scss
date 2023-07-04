@@ -1,0 +1,21 @@
+.page {
+	main {
+		padding-top: vc(210);
+
+		@include devices {
+			padding-top: vc(70);
+		}
+	}
+
+	&__blank {
+		h1 {
+			margin-bottom: vc(30);
+		}
+
+		p {
+			&:not(:last-of-type) {
+				margin-bottom: vc(24);
+			}
+		}
+	}
+}

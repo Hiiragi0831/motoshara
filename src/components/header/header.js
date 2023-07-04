@@ -4,16 +4,6 @@ export const header = () => {
 	const bgOverflow = document.querySelector('.bg-overflow');
 	const html = document.getElementsByTagName('html')[0];
 
-	const setTopPadding = () => {
-		const w = document.documentElement.scrollTop;
-
-		if (w > 200) {
-			headerComponent.classList.add('header--black');
-		} else {
-			headerComponent.classList.remove('header--black');
-		}
-	};
-
 	const menuOpen = () => {
 		bgOverflow.classList.remove('is-hidden');
 		bgOverflow.classList.add('is-active');
@@ -34,14 +24,6 @@ export const header = () => {
 	if (headerComponent.querySelector('[data-large]')) {
 		const large = headerComponent.querySelector('[data-large]').parentNode;
 		large.querySelector('.header__dropdown').classList.add('header__dropdown--large');
-	}
-
-	if (headerComponent && !headerComponent.classList.contains('header--black')) {
-		setTopPadding();
-
-		window.addEventListener('scroll', () => {
-			setTopPadding();
-		});
 	}
 
 	document.querySelector('.header__burger').addEventListener('click', () => {
