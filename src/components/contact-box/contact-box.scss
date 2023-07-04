@@ -3,9 +3,6 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		font-weight: 400;
-		font-size: vc(13);
-		line-height: vc(15);
 		color: $color-gray-500;
 
 		a {
@@ -35,5 +32,12 @@
 
 	&__bottom {
 		padding-left: vc(30);
+
+		p,
+		a {
+			font-weight: 400;
+			font-size: vc(13);
+			line-height: vc(15);
+		}
 	}
 }

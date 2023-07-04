@@ -56,6 +56,10 @@
 		width: vc(290);
 		height: vc(70);
 
+		svg {
+			fill: $color-gray-500;
+		}
+
 		@include devices {
 			width: vc(160);
 			height: vc(40);
@@ -172,7 +176,7 @@
 		flex-direction: column;
 		padding: vc(5) vc(15);
 		width: vc(180);
-		background-color: $color-gray;
+		background-color: $color-gray-50;
 		opacity: 0;
 		visibility: hidden;
 		transition: opacity $transition, visibility $transition;
@@ -230,7 +234,7 @@
 	padding: vc(20) vc(50) vc(20) vc(15);
 	width: vc(310);
 	height: 100vh;
-	background-color: $color-gray;
+	background-color: $color-gray-500;
 	transition: left $transition;
 
 	&__box {

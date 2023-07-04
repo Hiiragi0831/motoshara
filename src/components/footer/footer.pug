@@ -1,2 +1,39 @@
-footer.footer
-	h2 footer
+footer
+	.footer
+		.container
+			.footer__row
+				a.logo(href="/")
+					+svg('logo')
+				.footer__links
+					p #[b Полезная информация]
+					a(href="#") Политика конфиденциальности
+					a(href="#") Возврат и гарантия
+					a(href="#") Оплата и доставка
+					a(href="#") Юридическим лицам
+				.footer__links
+					p #[b Категории]
+					a(href="#") Запчасти для квадроциклов
+					a(href="#") Запчасти для мотоциклов
+					a(href="#") Запчасти для Honda
+					a(href="#") Запчасти для Honda
+				.footer__ya
+					+picture({
+						path: `${baseDir}assets/images/footer/ya`,
+						ext: 'png',
+					})
+				.footer__payments
+					+picture({
+						path: `${baseDir}assets/images/footer/mir`,
+						ext: 'png',
+					})
+					+picture({
+						path: `${baseDir}assets/images/footer/visa`,
+						ext: 'png',
+					})
+					+picture({
+						path: `${baseDir}assets/images/footer/mastercard`,
+						ext: 'png',
+					})
+
+	.footer-copyright
+		p Все права защищены. 2023

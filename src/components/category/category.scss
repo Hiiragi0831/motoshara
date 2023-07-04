@@ -1,9 +1,17 @@
 .category {
+	h2 {
+		margin-bottom: vc(30);
+	}
+
 	&__row {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		width: 100%;
 		gap: vc(24);
+
+		@include devices {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	&__item {

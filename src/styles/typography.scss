@@ -1,8 +1,21 @@
+h1,
+.h2 {
+	font-weight: 700;
+	font-size: vc(56);
+	line-height: vc(60);
+	letter-spacing: -1.5%;
+}
+
 h2,
 .h2 {
-	margin-bottom: vc(30);
 	font-weight: 700;
 	font-size: vc(48);
 	line-height: vc(56);
-	letter-spacing: -0.72px;
+	letter-spacing: -1.5%;
+}
+
+p {
+	font-weight: 300;
+	font-size: vc(16);
+	line-height: vc(24);
 }
