@@ -1,0 +1,31 @@
+extends @pug/base
+
+append globals
+	- pageName = 'product'
+
+append vars
+
+block content
+	.bg-overflow.is-hidden
+	.site.page
+		include @components/header/header
+		main
+			section.product
+				.container
+					.product__head
+						.product__image
+							+picture({
+								path: `${baseDir}assets/images/product/image`,
+								ext: 'png',
+							})
+						.product__info
+							p.product__info-article Артикул - 12359965
+							p.h3 Мотоцикл Yamaha FZS600 Fazer (2003 г)
+							.product__info-row
+								.product__info-price
+									p #[span Цена]
+					.product__main
+
+
+		include @components/footer/footer
+		include @components/analytics/analytics

@@ -1,0 +1,42 @@
+.product {
+	&__head {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: vc(24);
+	}
+
+	&__image {
+		display: flex;
+		overflow: hidden;
+		border-radius: vc(10);
+	}
+
+	&__info {
+		overflow: hidden;
+		border-radius: vc(10);
+		padding: vc(30);
+		background-color: $color-secondary-50;
+
+		&-article {
+			font-weight: 400;
+			font-size: vc(12);
+			line-height: vc(16);
+		}
+
+		&-row {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&-price {
+			display: flex;
+			flex-direction: column;
+
+			span {
+				font-weight: 400;
+				font-size: vc(18);
+				line-height: vc(26);
+			}
+		}
+	}
+}
