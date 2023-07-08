@@ -3,6 +3,10 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: vc(24);
+
+		@include devices {
+			grid-template-columns: 100%;
+		}
 	}
 
 	&__image {
@@ -12,10 +16,13 @@
 	}
 
 	&__info {
+		display: flex;
+		flex-direction: column;
 		overflow: hidden;
 		border-radius: vc(10);
 		padding: vc(30);
 		background-color: $color-secondary-50;
+		gap: vc(20);
 
 		&-article {
 			font-weight: 400;
@@ -25,7 +32,9 @@
 
 		&-row {
 			display: flex;
+			flex-wrap: wrap;
 			justify-content: space-between;
+			gap: vc(15);
 		}
 
 		&-price {
@@ -36,6 +45,96 @@
 				font-weight: 400;
 				font-size: vc(18);
 				line-height: vc(26);
+			}
+
+			p {
+				color: $color-primary-500;
+			}
+
+			@include devices {
+				width: 100%;
+			}
+		}
+
+		&-payment {
+			span {
+				font-weight: 400;
+				font-size: vc(18);
+				line-height: vc(26);
+			}
+
+			&-items {
+				display: flex;
+				align-items: center;
+				gap: vc(5);
+
+				p {
+					max-width: vc(110);
+					font-weight: 400;
+					font-size: vc(12);
+					line-height: vc(16);
+				}
+
+				svg {
+					width: vc(47);
+					height: vc(30);
+				}
+
+				@include devices {
+					flex-wrap: wrap;
+					justify-content: space-between;
+					gap: 0;
+
+					svg {
+						width: 30%;
+						height: auto;
+					}
+
+					p {
+						margin-top: vc(15);
+						max-width: 100%;
+					}
+				}
+			}
+		}
+
+		&-count,
+		&-button {
+			display: flex;
+			align-items: flex-end;
+		}
+
+		&-offer {
+			p {
+				font-weight: 400;
+				font-size: vc(18);
+				line-height: vc(26);
+			}
+		}
+	}
+
+	&__main {
+		margin-top: vc(60);
+	}
+
+	&__options {
+		display: grid;
+		grid-template: 1fr / 1fr 1fr;
+		gap: vc(10) vc(60);
+	}
+
+	&__option {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-bottom: 1px solid $color-gray-500;
+		gap: vc(15);
+
+		p {
+			width: 50%;
+
+			&:last-child {
+				text-align: end;
 			}
 		}
 	}

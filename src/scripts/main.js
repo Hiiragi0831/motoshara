@@ -19,6 +19,7 @@ import home from '../pages/home/home';
 import {header} from '../components/header/header';
 import slider from '../components/slider/slider';
 import {Tabs} from '../components/tabs/tabs';
+import {initQty} from '../components/field-num/field-num';
 // import sharing from '../components/sharing/sharing';
 
 // eslint-disable-next-line no-underscore-dangle
@@ -67,8 +68,8 @@ const init = () => {
 	header();
 	home.init();
 	slider.init();
-	let tabs = new Tabs();
-	window.tabs = tabs;
+	window.tabs = new Tabs();
+	initQty();
 
 	// закоментировать или удалить если SPA поведение не требуется
 	// router.init(scriptsInit, scriptsDestroy);

@@ -1,0 +1,36 @@
+extends @pug/base
+
+append globals
+	- pageName = 'categories'
+
+append vars
+
+block content
+	.bg-overflow.is-hidden
+	.site.page
+		include @components/header/header
+		main
+			section.about
+				.container
+					.about__row
+						.about__info
+							h1 О компании
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, provident, veritatis. Aliquam cum dignissimos dolor mollitia, optio repellat veniam? Enim est iusto molestias necessitatibus nihil pariatur sint vel voluptate, voluptatibus!
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, provident, veritatis. Aliquam cum dignissimos dolor mollitia, optio repellat veniam? Enim est iusto molestias necessitatibus nihil pariatur sint vel voluptate, voluptatibus!
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, provident, veritatis. Aliquam cum dignissimos dolor mollitia, optio repellat veniam? Enim est iusto molestias necessitatibus nihil pariatur sint vel voluptate, voluptatibus!
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, provident, veritatis. Aliquam cum dignissimos dolor mollitia, optio repellat veniam? Enim est iusto molestias necessitatibus nihil pariatur sint vel voluptate, voluptatibus!
+						.about__image
+							+picture({
+								path: `${baseDir}assets/images/product/image`,
+								ext: 'png',
+							})
+					.about__requisites
+						h2 Реквизиты
+						.about__details
+							each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+								.about__detail
+									p Наименование организации
+
+
+		include @components/footer/footer
+		include @components/analytics/analytics

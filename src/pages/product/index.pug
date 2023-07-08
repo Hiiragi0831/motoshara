@@ -19,12 +19,33 @@ block content
 								ext: 'png',
 							})
 						.product__info
-							p.product__info-article Артикул - 12359965
-							p.h3 Мотоцикл Yamaha FZS600 Fazer (2003 г)
+							.product__info-title
+								p.product__info-article Артикул - 12359965
+								p.h3 Мотоцикл Yamaha FZS600 Fazer (2003 г)
 							.product__info-row
 								.product__info-price
-									p #[span Цена]
+									span Цена
+									p.h4 456 552 ₽
+								.product__info-count
+									.field-num
+										button.field-num__btn.field-num__btn--minus(type='button') -
+										button.field-num__btn.field-num__btn--plus(type='button') +
+										input.field-num__input(type='number', value='1', inputmode='numeric', name='count', max='10', min='1', step='1')
+								.product__info-button
+									button.button.button__primary В корзину
+							.product__info-payment
+								span Способы оплаты
+								.product__info-payment-items
+									+svg('mir')
+									+svg('visa')
+									+svg('mastercard')
+									p Оплата картой и безнал с ндс 20%
+							.product__info-offer
+								p Гарантия или доставка, какой то небольшой офер выгоды
+							.product__info-description
+								p Lorem ipsum dolor sit amet consectetur. Tellus laoreet volutpat fermentum nibh ante in vel. Quam varius sagittis pellentesque egestas ridiculus amet. Vulputate sem eget libero aliquet tortor. Aliquam posuere donec et volutpat et aenean. Sed faucibus ac adipiscing pretium nunc ut a. Quis risus in elementum arcu id dis.
 					.product__main
+						include @components/tabs/tabs
 
 
 		include @components/footer/footer

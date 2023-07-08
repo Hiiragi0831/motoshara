@@ -22,18 +22,9 @@ footer
 						ext: 'png',
 					})
 				.footer__payments
-					+picture({
-						path: `${baseDir}assets/images/footer/mir`,
-						ext: 'png',
-					})
-					+picture({
-						path: `${baseDir}assets/images/footer/visa`,
-						ext: 'png',
-					})
-					+picture({
-						path: `${baseDir}assets/images/footer/mastercard`,
-						ext: 'png',
-					})
+					+svg('mir')
+					+svg('visa')
+					+svg('mastercard')
 
 	.footer-copyright
 		p Все права защищены. 2023

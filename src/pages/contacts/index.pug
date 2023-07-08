@@ -1,0 +1,39 @@
+extends @pug/base
+
+append globals
+	- pageName = 'categories'
+
+append vars
+
+block content
+	.bg-overflow.is-hidden
+	.site.page
+		include @components/header/header
+		main
+			section.contacts
+				.container
+					h1 Контакты
+					.contacts__items
+						.contacts__item
+							.contacts__item-icon
+								+svg('icon-map-1')
+							.contacts__item-info
+								p Адрес:
+								p Белгород, пр-кт Богдана Хмельницкого 137Т
+						.contacts__item
+							.contacts__item-icon
+								+svg('icon-phone-1')
+							.contacts__item-info
+								p Адрес:
+								p Белгород, пр-кт Богдана Хмельницкого 137Т
+						.contacts__item
+							.contacts__item-icon
+								+svg('icon-mail-1')
+							.contacts__item-info
+								p Адрес:
+								p Белгород, пр-кт Богдана Хмельницкого 137Т
+					.contacts__map
+						iframe(src="https://yandex.ru/map-widget/v1/?indoorLevel=1&ll=36.570891%2C50.632600&mode=whatshere&whatshere%5Bpoint%5D=36.570891%2C50.632600&whatshere%5Bzoom%5D=17&z=17" allowfullscreen="true")
+
+		include @components/footer/footer
+		include @components/analytics/analytics

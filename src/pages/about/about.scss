@@ -1,0 +1,47 @@
+.about {
+	&__row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: vc(24);
+
+		@include devices {
+			grid-template-columns: 100%;
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		gap: vc(26);
+	}
+
+	&__image {
+		display: flex;
+		overflow: hidden;
+		border-radius: vc(10);
+	}
+
+	&__requisites {
+		display: flex;
+		flex-direction: column;
+		margin-top: vc(60);
+		gap: vc(20);
+	}
+
+	&__details {
+		display: grid;
+		grid-template: 1fr / 1fr 1fr;
+		border: 1px solid $color-gray-500;
+		border-bottom: none;
+	}
+
+	&__detail {
+		border-right: 1px solid;
+		border-bottom: 1px solid;
+		padding: vc(12) vc(20);
+
+		&:nth-child(2n) {
+			border-right: none;
+		}
+	}
+}
