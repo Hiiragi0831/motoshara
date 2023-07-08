@@ -1,0 +1,54 @@
+extends @pug/base
+
+append globals
+	- pageName = 'categories'
+
+append vars
+
+block content
+	.bg-overflow.is-hidden
+	.site.page
+		include @components/header/header
+		main
+			section.basket
+				.container
+					h2 Оформление заказа
+					.basket__table-wrapper
+						.basket__table
+							.basket__table-tr
+								.basket__table-td.basket__table-td--img
+								.basket__table-td.basket__table-td--name Наименование
+								.basket__table-td.basket__table-td--count Кол
+								.basket__table-td.basket__table-td--weight Вес
+								.basket__table-td.basket__table-td--price Цена
+								.basket__table-td.basket__table-td--summary Стоимость
+								.basket__table-td.basket__table-td--del
+							each val in [1, 2, 3]
+								.basket__table-tr
+									.basket__table-td.basket__table-td--img
+										+picture({
+											path: `${baseDir}assets/images/product/image`,
+											ext: 'png',
+										})
+									.basket__table-td.basket__table-td--name Мотоцикл Yamaha FZS600 Fazer (2003 г)
+									.basket__table-td.basket__table-td--count 1 шт
+									.basket__table-td.basket__table-td--weight 200 кг
+									.basket__table-td.basket__table-td--price 456 552 ₽
+									.basket__table-td.basket__table-td--summary 456 552 ₽
+									.basket__table-td.basket__table-td--del
+										button.button.button__primary X
+					.basket__forms
+						.basket__col
+							.basket__form
+								.basket__form-title Ваши данные
+								input.form__input(placeholder="Имя")
+								input.form__input(placeholder="Email")
+								input.form__input(placeholder="Телефон")
+						.basket__col
+							.basket__form
+								.basket__form-title Способ получения
+								.basket__form-chebox
+
+
+		include @components/footer/footer
+		include @components/analytics/analytics
