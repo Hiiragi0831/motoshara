@@ -44,6 +44,7 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		margin-top: vc(40);
+		gap: vc(24);
 
 		@include devices {
 			grid-template-columns: 1fr;
@@ -55,6 +56,12 @@
 		flex-direction: column;
 		gap: vc(30);
 
+		&-col {
+			display: flex;
+			flex-direction: column;
+			gap: vc(30);
+		}
+
 		&-title {
 			font-weight: 500;
 			font-size: vc(24);
@@ -62,9 +69,10 @@
 			letter-spacing: -1.5%;
 		}
 
-		&-chebox {
+		&-checkbox {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
+			gap: vc(24);
 
 			@include devices {
 				grid-template-columns: 1fr;

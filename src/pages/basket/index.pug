@@ -46,8 +46,16 @@ block content
 								input.form__input(placeholder="Телефон")
 						.basket__col
 							.basket__form
-								.basket__form-title Способ получения
-								.basket__form-chebox
+								.basket__form-col
+									.basket__form-title Способ получения
+									.basket__form-checkbox
+										+radio('Самовывоз', 'obtaining', 'obtaining-1', true)
+										+radio('Доставка', 'obtaining', 'obtaining-2')
+								.basket__form-col
+									.basket__form-title Способ оплаты
+									.basket__form-checkbox
+										+radio('Оплата по карте', 'payment', 'payment-1', true)
+										+radio('Оплата через СПБ', 'payment', 'payment-2')
 
 
 		include @components/footer/footer
