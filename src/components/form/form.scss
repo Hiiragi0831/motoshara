@@ -8,6 +8,11 @@
 		font-size: vc(16);
 		color: $color-gray-500;
 		background-color: $color-white;
+		transition: border $transition, color $transition;
+
+		&.is-invalid {
+			border: 1px solid $color-primary-600;
+		}
 	}
 
 	&__box-icon {
