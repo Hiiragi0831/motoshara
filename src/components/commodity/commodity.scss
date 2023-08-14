@@ -5,6 +5,7 @@
 	overflow: hidden;
 	border-radius: vc(5);
 	padding: vc(24);
+	height: 100%;
 	box-shadow: $box-shadow;
 	text-align: center;
 	background-color: $color-white;
@@ -24,6 +25,7 @@
 	}
 
 	&__title {
+		margin-bottom: auto;
 		font-weight: 500;
 		font-size: vc(16);
 		line-height: vc(24);
