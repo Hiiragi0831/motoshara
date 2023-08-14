@@ -12,6 +12,19 @@
 			margin-bottom: vc(30);
 		}
 
+		ul {
+			margin-bottom: vc(24);
+			margin-left: vc(20);
+
+			li {
+				display: list-item;
+				list-style: initial;
+				font-weight: 300;
+				font-size: vc(16);
+				line-height: vc(24);
+			}
+		}
+
 		p {
 			&:not(:last-of-type) {
 				margin-bottom: vc(24);
