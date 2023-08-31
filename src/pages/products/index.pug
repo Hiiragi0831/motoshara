@@ -49,8 +49,10 @@ block content
 										option Бренд
 							button.button.button__grey Сбросить
 						.products__results
-							each val in [1, 2, 3, 4, 5, 6, 7, 8, 9]
-								include @components/commodity/commodity
+							.products__results-items
+								each val in [1, 2, 3, 4, 5, 6, 7, 8, 9]
+									include @components/commodity/commodity
+							.button.button__primary ещё
 
 		include @components/footer/footer
 		include @components/analytics/analytics

@@ -11,9 +11,15 @@
 	}
 
 	&__results {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
+		display: flex;
+		flex-direction: column;
 		gap: vc(24);
+
+		&-items {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			gap: vc(24);
+		}
 	}
 
 	&__filters {
@@ -31,6 +37,12 @@
 				width: vc(20);
 				height: vc(20);
 			}
+		}
+
+		&-buttons {
+			display: flex;
+			margin-top: vc(20);
+			gap: vc(12);
 		}
 	}
 
