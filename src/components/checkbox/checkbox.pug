@@ -1,4 +1,6 @@
 mixin radio(title, name, id, checked)
 	.checkbox
-		input.checkbox-radio(type="radio" value=title name=name id=id checked=checked)
-		label(for=id)=title
+		label.checkbox__label
+			input(type="radio" value=title name=name id=id checked=checked)
+			span=title
+

@@ -1,7 +1,10 @@
 .product {
+	position: relative;
+	width: 100%;
+
 	&__head {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 		gap: vc(24);
 
 		@include devices {
@@ -10,9 +13,56 @@
 	}
 
 	&__image {
+		position: relative;
 		display: flex;
+		flex-direction: column;
+		gap: vc(30);
+	}
+
+	&__swiper {
 		overflow: hidden;
 		border-radius: vc(10);
+		width: 100%;
+		height: vc(300);
+
+		picture {
+			width: 100%;
+			height: 100%;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+		}
+	}
+
+	&__swiper-thumbs {
+		width: calc(100% + #{vc(15)});
+		height: vc(100);
+
+		.swiper-slide {
+			opacity: 0.5;
+			transition: opacity $transition;
+
+			&-thumb-active {
+				opacity: 1;
+			}
+		}
+
+		picture {
+			padding-right: vc(15);
+			width: 100%;
+			height: 100%;
+
+			img {
+				overflow: hidden;
+				border-radius: vc(10);
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
 	}
 
 	&__info {
