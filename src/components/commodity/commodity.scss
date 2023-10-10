@@ -83,7 +83,8 @@
 		}
 
 		#{$p}__button {
-			width: vc(170);
+			margin-left: auto;
+			width: vc(220);
 		}
 
 		@include devices {
