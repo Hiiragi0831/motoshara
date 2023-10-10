@@ -11,13 +11,26 @@ block content
 		include @components/header/header
 		main
 			include @components/hero/hero
-			include @components/category/category
+			section.category
+				.container
+					.category__row
+						each val in [1, 2, 3, 4, 5, 6]
+							.category__item
+								.category__item-img
+									+picture({
+										path: `${baseDir}assets/images/hero-1`,
+										ext: 'jpg',
+									})
+								.category__item-info
+									.category__item-title Название категории
+									.category__item-button
+										a.button.button__primary(href="#") В каталог
 			section.home__commodity
 				.container
-					h2 Популярные категории
+					h2 Популярные товары
 					.home__commodity-row
 						each val in [1, 2, 3, 4, 5, 6, 7, 8]
-							include @components/commodity/commodity
+							+commodity()
 			include @components/request/request
 			+slider-partners()
 			include @pages/home/about

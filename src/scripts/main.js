@@ -21,6 +21,7 @@ import slider from '../components/slider/slider';
 import {Tabs} from '../components/tabs/tabs';
 import {initQty} from '../components/field-num/field-num';
 import product from '../pages/product/product';
+import hero from '../components/hero/hero';
 // import sharing from '../components/sharing/sharing';
 
 // eslint-disable-next-line no-underscore-dangle
@@ -72,6 +73,7 @@ const init = () => {
 	window.tabs = new Tabs();
 	initQty();
 	product.init();
+	hero.init();
 
 	// закоментировать или удалить если SPA поведение не требуется
 	// router.init(scriptsInit, scriptsDestroy);

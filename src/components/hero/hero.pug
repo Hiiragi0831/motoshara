@@ -1,13 +1,15 @@
 section.hero
-	.hero__item
-		.hero__bg
-			+picture({
-				path: `${baseDir}assets/images/hero-1`,
-				ext: 'jpg',
-			})
-		.hero__info
-			h1.hero__title Запчасти для мототехники
-			p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis am in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.
-			.hero__buttons
-				.button.button__primary Перейти в каталог
-				.button.button__white Заказать звонок
+	.container
+		.swiper
+			.swiper-wrapper
+				.swiper-slide
+					+picture({
+						path: `${baseDir}assets/images/hero-1`,
+						ext: 'jpg',
+					})
+				.swiper-slide
+					+picture({
+						path: `${baseDir}assets/images/hero-1`,
+						ext: 'jpg',
+					})
+			.swiper-pagination
