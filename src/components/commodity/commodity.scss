@@ -49,8 +49,8 @@
 
 	&--line {
 		position: relative;
-		display: flex;
-		flex-direction: row;
+		display: grid;
+		grid-template-columns: vc(60) 1fr vc(120) vc(220);
 		padding: vc(15);
 
 		#{$p}__img {
@@ -88,6 +88,7 @@
 		}
 
 		@include devices {
+			display: flex;
 			flex-direction: column;
 		}
 	}
