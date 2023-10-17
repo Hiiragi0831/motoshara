@@ -5,12 +5,19 @@
 	&__row {
 		display: flex;
 		justify-content: space-between;
+		gap: vc(15);
 
 		@include devices {
 			flex-direction: column;
 			align-items: center;
 			gap: vc(30);
 		}
+	}
+
+	&__start {
+		display: flex;
+		flex-direction: column;
+		gap: vc(15);
 	}
 
 	.logo {
@@ -47,6 +54,16 @@
 			}
 		}
 
+		&--2 {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: vc(15);
+
+			@include devices {
+				grid-template-columns: 1fr;
+			}
+		}
+
 		@include devices {
 			width: 100%;
 		}
@@ -58,8 +75,8 @@
 
 	&__payments {
 		display: flex;
-		flex-direction: column;
-		width: vc(90);
+		width: 100%;
+		max-width: vc(300);
 		gap: vc(5);
 
 		svg {

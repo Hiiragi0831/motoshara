@@ -12,7 +12,8 @@
 			margin-bottom: vc(30);
 		}
 
-		ul {
+		ul,
+		ol {
 			margin-bottom: vc(24);
 			margin-left: vc(20);
 
@@ -23,6 +24,10 @@
 				font-size: vc(16);
 				line-height: vc(24);
 			}
+		}
+
+		ol li {
+			list-style: decimal;
 		}
 
 		p {

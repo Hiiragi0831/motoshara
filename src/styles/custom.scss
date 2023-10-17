@@ -1,0 +1,23 @@
+.row {
+	display: grid;
+	gap: vc(15);
+
+	&__2 {
+		grid-template-columns: 1fr 1fr;
+
+		@include devices {
+			grid-template-columns: 1fr;
+		}
+	}
+}
+
+.box-grey {
+	border-radius: vc(10);
+	padding: vc(15);
+	background-color: $color-gray-50;
+}
+
+.my {
+	margin-top: vc(24);
+	margin-bottom: vc(24);
+}
