@@ -84,6 +84,10 @@
 			}
 		}
 
+		&-quantity {
+			color: $color-primary-500;
+		}
+
 		&-article {
 			font-weight: 400;
 			font-size: vc(12);
