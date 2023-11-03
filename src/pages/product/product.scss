@@ -74,6 +74,16 @@
 		background-color: $color-secondary-50;
 		gap: vc(20);
 
+		&-top {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			@include devices {
+				flex-direction: column;
+			}
+		}
+
 		&-article {
 			font-weight: 400;
 			font-size: vc(12);
