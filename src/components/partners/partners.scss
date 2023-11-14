@@ -1,6 +1,15 @@
 .partners {
 	display: flex;
+	align-items: center;
 	border-radius: vc(10);
 	padding: vc(30);
+	height: 100%;
+	max-height: vc(120);
 	box-shadow: $box-shadow;
+
+	picture,
+	img {
+		height: 100%;
+		object-fit: contain;
+	}
 }
